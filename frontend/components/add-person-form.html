@@ -1,0 +1,29 @@
+<div class="add-person">
+    <button class="btn btn-default" ng-show="!controller.adding" ng-click="controller.addPerson()">{{'add-person.title' | translate}}</button>
+
+    <form name="controller.addPersonForm" class="form-inline" ng-show="controller.adding">
+        <div class="form-group">
+            <label for="firstname">{{'add-person.form.firstname' | translate}}</label>
+            <input id="firstname" name="firstname" class="form-control" type="text" required ng-model="controller.person.firstname">
+        </div>
+        <div class="form-group">
+            <label for="lastname">{{'add-person.form.lastname' | translate}}</label>
+            <input id="lastname" name="lastname" class="form-control" type="text" required ng-model="controller.person.lastname">
+        </div>
+        <div class="form-group">
+            <label for="birthday">{{'add-person.form.birthday' | translate}}</label>
+            <input id="birthday" name="birthday" class="form-control" type="date" required ng-model="controller.person.birthday">
+        </div>
+
+        <input type="submit" class="btn btn-primary" ng-click="controller.save()" ng-disabled="!controller.valid()"
+               value="{{'add-person.button.save' | translate}}"/>
+        <input type="button" class="btn" ng-click="controller.cancel()" value="{{'add-person.button.cancel' | translate}}"/>
+
+<br /><pre>
+controller.addPersonForm.birthday.$valid = {{controller.addPersonForm.birthday.$valid}}
+controller.addPersonForm.birthday.$error = {{controller.addPersonForm.birthday.$error}}
+controller.addPersonForm.$valid = {{controller.addPersonForm.$valid}}
+controller.addPersonForm.$error.required = {{!!controller.addPersonForm.$error.required}}
+</pre>
+    </form>
+</div>

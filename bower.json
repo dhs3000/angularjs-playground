@@ -1,0 +1,39 @@
+{
+  "name": "angularjs-playground",
+  "dependencies": {
+    "lodash": "^4.5.0",
+    "jquery": "^2.2.0",
+    "angular": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "0.13.4",
+    "angular-animate": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "angular-touch": "^1.5.0",
+    "angular-mocks": "^1.5.1"
+  },
+
+  "devDependencies": {
+    "jasmine": "^2.4",
+    "jasmine-collection-matchers": "^0.0.8"
+  },
+
+  "overrides": {
+    "angular": {
+      "main": [
+        "./angular.js",
+        "./angular-csp.css"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/js/bootstrap.js",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff"
+      ]
+    }
+  }
+}

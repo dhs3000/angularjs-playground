@@ -1,0 +1,8 @@
+<div class="people-list">
+    <h2 class="people-list--title">{{title}}</h2>
+    <ul class="people-list--list">
+        <li ng-repeat="person in people track by person.id" class="people-list--person">
+            <person person="person"/>
+        </li>
+    </ul>
+</div>
